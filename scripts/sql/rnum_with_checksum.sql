@@ -46,7 +46,8 @@ select
   
   from 
     sierra_view.patron_view as pv
-  cross join	
+  cross join	-- don't actually use this for anything limited to more than a few results...
+                -- it's a terribly inefficient and misleading kludge.
 	sierra_view.bib_record as br
 	
   limit 5
